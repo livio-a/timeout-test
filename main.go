@@ -12,9 +12,9 @@ import (
 
 func main() {
 	port := 8080
-	idleTimeout := 1 * time.Milliseconds
-	readTimeout := 1 * time.Milliseconds
-	writeTimeout := 1 * time.Milliseconds
+	idleTimeout := 1 * time.Millisecond
+	readTimeout := 1 * time.Millisecond
+	writeTimeout := 1 * time.Millisecond
 
 	handler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, %v", r.URL.Path)
